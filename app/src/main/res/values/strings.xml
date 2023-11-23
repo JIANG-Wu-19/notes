@@ -132,4 +132,6 @@
         <item quantity="other"><xliff:g id="number" example="15">%1$s</xliff:g> results for \"<xliff:g id="search" example="???">%2$s</xliff:g>\"</item>
     </plurals>
 
+    <string name="app_id">46e2b69e</string>
+
 </resources>
