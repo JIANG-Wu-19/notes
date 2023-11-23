@@ -1,7 +1,13 @@
 R_DEF: Internal format may change without notice
 local
 array format_for_exported_note
+array language_entries
+array language_values
 array menu_share_ways
+array punc_entries
+array punc_values
+array stream_entries
+array stream_values
 color primary_text_dark
 color secondary_text_dark
 color user_query_highlight
@@ -89,6 +95,7 @@ id et_edit_text
 id et_foler_name
 id font_size_selector
 id hour
+id iatBtn
 id iv_alert_icon
 id iv_bg_blue
 id iv_bg_blue_select
@@ -141,6 +148,7 @@ id tv_name
 id tv_time
 id tv_title
 id tv_title_bar
+id voice_input
 id widget_bg_image
 id widget_text
 layout account_dialog_title
@@ -170,6 +178,7 @@ string alert_message_delete_folder
 string alert_message_delete_note
 string alert_message_delete_notes
 string alert_title_delete
+string app_id
 string app_name
 string app_widget2x2
 string app_widget4x4
@@ -234,6 +243,10 @@ string notealert_enter
 string notealert_ok
 string notelist_menu_new
 string notelist_string_info
+string pref_key_iat_show
+string pref_key_translate
+string pref_title_iat_show
+string pref_title_translate
 string preferences_account_summary
 string preferences_account_title
 string preferences_add_account
@@ -262,6 +275,7 @@ string success_sync_account
 string sync_progress_init_list
 string sync_progress_login
 string sync_progress_syncing
+string text_begin
 string ticker_cancel
 string ticker_fail
 string ticker_success
@@ -279,7 +293,10 @@ style TextAppearancePrimaryItem
 style TextAppearanceSecondaryItem
 style TextAppearanceSuper
 style TextAppearanceUnderMenuIcon
+xml iat_setting
 xml preferences
 xml searchable
+xml tts_setting
+xml understand_setting
 xml widget_2x_info
 xml widget_4x_info

@@ -6,9 +6,43 @@
         <item>--%s</item>     
         <item>--%s</item>     
     </string-array>
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>en_us</item>
+    </string-array>
     <string-array name="menu_share_ways">
         <item>Messaging</item>
         <item>Email</item>
+    </string-array>
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
     </string-array>
     <color name="user_query_highlight">#335b5b5b</color>
     <dimen name="text_font_size_large">26sp</dimen>
@@ -25,6 +59,7 @@
     <string name="alert_message_delete_note">Confirm to delete this note?</string>
     <string name="alert_message_delete_notes">Confirm to delete the selected %d notes?</string>
     <string name="alert_title_delete">Delete selected notes</string>
+    <string name="app_id">46e2b69e</string>
     <string name="app_name">Notes</string>
     <string name="app_widget2x2">Notes 2x2</string>
     <string name="app_widget4x4">Notes 4x4</string>
@@ -89,6 +124,10 @@
     <string name="notealert_ok">Got it</string>
     <string name="notelist_menu_new">Add note</string>
     <string name="notelist_string_info">...</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_key_translate">translate</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <string name="pref_title_translate">翻译</string>
     <string name="preferences_account_summary">Sync notes with google task</string>
     <string name="preferences_account_title">Sync account</string>
     <string name="preferences_add_account">Add account</string>
@@ -117,6 +156,7 @@
     <string name="sync_progress_init_list">Getting remote note list...</string>
     <string name="sync_progress_login">Logging into %1$s...</string>
     <string name="sync_progress_syncing">Synchronize local notes with Google Task...</string>
+    <string name="text_begin">Start voice input</string>
     <string name="ticker_cancel">Sync is canceled</string>
     <string name="ticker_fail">Sync is failed</string>
     <string name="ticker_success">Sync is successful</string>

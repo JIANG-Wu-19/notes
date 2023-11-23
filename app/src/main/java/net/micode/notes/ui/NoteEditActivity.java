@@ -16,6 +16,7 @@
 
 package net.micode.notes.ui;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
@@ -90,6 +91,10 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.LinkedHashMap;
+import java.io.IOException;
+import java.io.InputStream;
+
+import androidx.core.app.ActivityCompat;
 
 
 public class NoteEditActivity extends Activity implements OnClickListener,
@@ -196,13 +201,16 @@ public class NoteEditActivity extends Activity implements OnClickListener,
             return;
         }
 
+        requestPermissions();
         initResources();
         StringBuffer param = new StringBuffer();
-        param.append("appid=" + getString(R.string.app_id));
-        param.append(",");
+        param.append("appid=12345678,");//appid需要自己设置
         param.append(SpeechConstant.ENGINE_MODE + "=" + SpeechConstant.MODE_MSC);
         SpeechUtility.createUtility(NoteEditActivity.this, param.toString());
         mIat = SpeechRecognizer.createRecognizer(this, mInitListener);
+
+        mIatDialog = new RecognizerDialog(this, mInitListener);
+        mSharedPreferences = getSharedPreferences(IatSettings.PREFER_NAME, Activity.MODE_PRIVATE);
     }
 
     /**
@@ -220,6 +228,18 @@ public class NoteEditActivity extends Activity implements OnClickListener,
                 return;
             }
             Log.d(TAG, "Restoring from killed activity");
+        }
+    }
+
+    private void requestPermissions() {
+        try {
+            if (Build.VERSION.SDK_INT >= 23) {
+                ActivityCompat.requestPermissions(this, new String[]{
+                        Manifest.permission.RECORD_AUDIO
+                }, 0x0010);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -414,6 +434,8 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         mNoteHeaderHolder.ivAlertIcon = (ImageView) findViewById(R.id.iv_alert_icon);
         mNoteHeaderHolder.tvAlertDate = (TextView) findViewById(R.id.tv_alert_date);
         mNoteHeaderHolder.ibSetBgColor = (ImageView) findViewById(R.id.btn_set_bg_color);
+        mNoteHeaderHolder.button1 = (Button) findViewById(R.id.iatBtn);
+        mNoteHeaderHolder.button1.setOnClickListener(this);
         mNoteHeaderHolder.ibSetBgColor.setOnClickListener(this);
         mNoteEditor = (EditText) findViewById(R.id.note_edit_view);
         mNoteEditorPanel = findViewById(R.id.sv_note_edit);
@@ -469,7 +491,13 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         setResult(RESULT_OK, intent);
     }
 
+    int ret=0;
     public void onClick(View v) {
+        if (null == mIat) {
+            // 创建单例失败，与 21001 错误为同样原因，参考 http://bbs.xfyun.cn/forum.php?mod=viewthread&tid=9688
+            this.showTip("创建对象失败，请确认 libmsc.so 放置正确，\n 且有调用 createUtility 进行初始化");
+            return;
+        }
         int id = v.getId();
         if (id == R.id.btn_set_bg_color) {
             mNoteBgColorSelector.setVisibility(View.VISIBLE);
@@ -493,6 +521,23 @@ public class NoteEditActivity extends Activity implements OnClickListener,
                         TextAppearanceResources.getTexAppearanceResource(mFontSizeId));
             }
             mFontSizeSelector.setVisibility(View.GONE);
+        }else if(id==R.id.iatBtn){
+            setParam();
+            boolean isShowDialog = mSharedPreferences.getBoolean(getString(R.string.pref_key_iat_show), true);
+            if (isShowDialog) {
+                // 显示听写对话框
+                mIatDialog.setListener(mRecognizerDialogListener);
+                mIatDialog.show();
+                showTip(getString(R.string.text_begin));
+            } else {
+                // 不显示听写对话框
+                ret = mIat.startListening(mRecognizerListener);
+                if (ret != ErrorCode.SUCCESS) {
+                    showTip("听写失败,错误码：" + ret + ",请点击网址https://www.xfyun.cn/document/error-code查询解决方案");
+                } else {
+                    showTip(getString(R.string.text_begin));
+                }
+            }
         }
     }
 
@@ -918,6 +963,9 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         }
     };
 
+    /**
+     * 听写监听器。
+     */
     private RecognizerListener mRecognizerListener = new RecognizerListener() {
 
         @Override

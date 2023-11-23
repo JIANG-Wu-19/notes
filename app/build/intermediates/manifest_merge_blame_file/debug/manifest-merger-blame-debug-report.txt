@@ -20,254 +20,297 @@
 20    android:versionName="0.1" >
 21
 22    <uses-sdk
-22-->E:\notes\app\src\main\AndroidManifest.xml:23:5-44
+22-->E:\notes\app\src\main\AndroidManifest.xml:24:5-44
 23        android:minSdkVersion="14"
-23-->E:\notes\app\src\main\AndroidManifest.xml:23:15-41
+23-->E:\notes\app\src\main\AndroidManifest.xml:24:15-41
 24        android:targetSdkVersion="29" />
 25
 26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-26-->E:\notes\app\src\main\AndroidManifest.xml:25:5-81
-26-->E:\notes\app\src\main\AndroidManifest.xml:25:22-78
+26-->E:\notes\app\src\main\AndroidManifest.xml:27:5-81
+26-->E:\notes\app\src\main\AndroidManifest.xml:27:22-78
 27    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-27-->E:\notes\app\src\main\AndroidManifest.xml:26:5-88
-27-->E:\notes\app\src\main\AndroidManifest.xml:26:22-85
-28    <uses-permission android:name="android.permission.INTERNET" />
-28-->E:\notes\app\src\main\AndroidManifest.xml:27:5-67
-28-->E:\notes\app\src\main\AndroidManifest.xml:27:22-64
-29    <uses-permission android:name="android.permission.READ_CONTACTS" />
-29-->E:\notes\app\src\main\AndroidManifest.xml:28:5-72
-29-->E:\notes\app\src\main\AndroidManifest.xml:28:22-69
-30    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
-30-->E:\notes\app\src\main\AndroidManifest.xml:29:5-74
-30-->E:\notes\app\src\main\AndroidManifest.xml:29:22-71
-31    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
-31-->E:\notes\app\src\main\AndroidManifest.xml:30:5-80
-31-->E:\notes\app\src\main\AndroidManifest.xml:30:22-77
-32    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-32-->E:\notes\app\src\main\AndroidManifest.xml:31:5-71
-32-->E:\notes\app\src\main\AndroidManifest.xml:31:22-68
-33    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
-33-->E:\notes\app\src\main\AndroidManifest.xml:32:5-74
-33-->E:\notes\app\src\main\AndroidManifest.xml:32:22-71
-34    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-34-->E:\notes\app\src\main\AndroidManifest.xml:33:5-81
-34-->E:\notes\app\src\main\AndroidManifest.xml:33:22-78
-35
-36    <application
-36-->E:\notes\app\src\main\AndroidManifest.xml:35:5-149:19
-37        android:debuggable="true"
-38        android:extractNativeLibs="true"
-39        android:icon="@drawable/icon_app"
-39-->E:\notes\app\src\main\AndroidManifest.xml:36:9-42
-40        android:label="@string/app_name"
-40-->E:\notes\app\src\main\AndroidManifest.xml:37:9-41
-41        android:testOnly="true" >
-42        <activity
-42-->E:\notes\app\src\main\AndroidManifest.xml:38:9-51:20
-43            android:name="net.micode.notes.ui.NotesListActivity"
-43-->E:\notes\app\src\main\AndroidManifest.xml:39:13-49
-44            android:configChanges="keyboardHidden|orientation|screenSize"
-44-->E:\notes\app\src\main\AndroidManifest.xml:40:13-74
-45            android:label="@string/app_name"
-45-->E:\notes\app\src\main\AndroidManifest.xml:41:13-45
-46            android:launchMode="singleTop"
-46-->E:\notes\app\src\main\AndroidManifest.xml:42:13-43
-47            android:theme="@style/NoteTheme"
-47-->E:\notes\app\src\main\AndroidManifest.xml:43:13-45
-48            android:uiOptions="splitActionBarWhenNarrow"
-48-->E:\notes\app\src\main\AndroidManifest.xml:44:13-57
-49            android:windowSoftInputMode="adjustPan" >
-49-->E:\notes\app\src\main\AndroidManifest.xml:45:13-52
-50            <intent-filter>
-50-->E:\notes\app\src\main\AndroidManifest.xml:47:13-50:29
-51                <action android:name="android.intent.action.MAIN" />
-51-->E:\notes\app\src\main\AndroidManifest.xml:48:17-69
-51-->E:\notes\app\src\main\AndroidManifest.xml:48:25-66
-52
-53                <category android:name="android.intent.category.LAUNCHER" />
-53-->E:\notes\app\src\main\AndroidManifest.xml:49:17-77
-53-->E:\notes\app\src\main\AndroidManifest.xml:49:27-74
-54            </intent-filter>
-55        </activity>
-56        <activity
-56-->E:\notes\app\src\main\AndroidManifest.xml:53:9-81:20
-57            android:name="net.micode.notes.ui.NoteEditActivity"
-57-->E:\notes\app\src\main\AndroidManifest.xml:54:13-48
-58            android:configChanges="keyboardHidden|orientation|screenSize"
-58-->E:\notes\app\src\main\AndroidManifest.xml:55:13-74
-59            android:launchMode="singleTop"
-59-->E:\notes\app\src\main\AndroidManifest.xml:56:13-43
-60            android:theme="@style/NoteTheme" >
-60-->E:\notes\app\src\main\AndroidManifest.xml:57:13-45
-61            <intent-filter>
-61-->E:\notes\app\src\main\AndroidManifest.xml:59:13-64:29
-62                <action android:name="android.intent.action.VIEW" />
-62-->E:\notes\app\src\main\AndroidManifest.xml:60:17-69
-62-->E:\notes\app\src\main\AndroidManifest.xml:60:25-66
-63
-64                <category android:name="android.intent.category.DEFAULT" />
-64-->E:\notes\app\src\main\AndroidManifest.xml:61:17-76
-64-->E:\notes\app\src\main\AndroidManifest.xml:61:27-73
-65
-66                <data android:mimeType="vnd.android.cursor.item/text_note" />
-66-->E:\notes\app\src\main\AndroidManifest.xml:62:17-78
-66-->E:\notes\app\src\main\AndroidManifest.xml:62:23-75
-67                <data android:mimeType="vnd.android.cursor.item/call_note" />
-67-->E:\notes\app\src\main\AndroidManifest.xml:62:17-78
-67-->E:\notes\app\src\main\AndroidManifest.xml:62:23-75
-68            </intent-filter>
-69            <intent-filter>
-69-->E:\notes\app\src\main\AndroidManifest.xml:66:13-71:29
-70                <action android:name="android.intent.action.INSERT_OR_EDIT" />
-70-->E:\notes\app\src\main\AndroidManifest.xml:67:17-79
-70-->E:\notes\app\src\main\AndroidManifest.xml:67:25-76
-71
-72                <category android:name="android.intent.category.DEFAULT" />
-72-->E:\notes\app\src\main\AndroidManifest.xml:61:17-76
-72-->E:\notes\app\src\main\AndroidManifest.xml:61:27-73
-73
-74                <data android:mimeType="vnd.android.cursor.item/text_note" />
-74-->E:\notes\app\src\main\AndroidManifest.xml:62:17-78
-74-->E:\notes\app\src\main\AndroidManifest.xml:62:23-75
-75                <data android:mimeType="vnd.android.cursor.item/call_note" />
-75-->E:\notes\app\src\main\AndroidManifest.xml:62:17-78
-75-->E:\notes\app\src\main\AndroidManifest.xml:62:23-75
+27-->E:\notes\app\src\main\AndroidManifest.xml:28:5-88
+27-->E:\notes\app\src\main\AndroidManifest.xml:28:22-85
+28    <!-- 连接网络权限，用于执行云端语音能力 -->
+29    <uses-permission android:name="android.permission.INTERNET" />
+29-->E:\notes\app\src\main\AndroidManifest.xml:30:5-67
+29-->E:\notes\app\src\main\AndroidManifest.xml:30:22-64
+30    <uses-permission android:name="android.permission.READ_CONTACTS" />
+30-->E:\notes\app\src\main\AndroidManifest.xml:31:5-72
+30-->E:\notes\app\src\main\AndroidManifest.xml:31:22-69
+31    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+31-->E:\notes\app\src\main\AndroidManifest.xml:32:5-74
+31-->E:\notes\app\src\main\AndroidManifest.xml:32:22-71
+32    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+32-->E:\notes\app\src\main\AndroidManifest.xml:33:5-80
+32-->E:\notes\app\src\main\AndroidManifest.xml:33:22-77
+33    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+33-->E:\notes\app\src\main\AndroidManifest.xml:34:5-71
+33-->E:\notes\app\src\main\AndroidManifest.xml:34:22-68
+34    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+34-->E:\notes\app\src\main\AndroidManifest.xml:35:5-74
+34-->E:\notes\app\src\main\AndroidManifest.xml:35:22-71
+35    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+35-->E:\notes\app\src\main\AndroidManifest.xml:36:5-81
+35-->E:\notes\app\src\main\AndroidManifest.xml:36:22-78
+36    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+37    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+37-->E:\notes\app\src\main\AndroidManifest.xml:38:5-71
+37-->E:\notes\app\src\main\AndroidManifest.xml:38:22-68
+38    <!-- 读取网络信息状态 -->
+39    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+39-->E:\notes\app\src\main\AndroidManifest.xml:40:5-79
+39-->E:\notes\app\src\main\AndroidManifest.xml:40:22-76
+40    <!-- 获取当前wifi状态 -->
+41    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+41-->E:\notes\app\src\main\AndroidManifest.xml:42:5-76
+41-->E:\notes\app\src\main\AndroidManifest.xml:42:22-73
+42    <!-- 允许程序改变网络连接状态 -->
+43    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+43-->E:\notes\app\src\main\AndroidManifest.xml:44:5-78
+43-->E:\notes\app\src\main\AndroidManifest.xml:44:22-76
+44    <!-- 读取手机信息权限 -->
+45    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+45-->E:\notes\app\src\main\AndroidManifest.xml:46:5-74
+45-->E:\notes\app\src\main\AndroidManifest.xml:46:22-72
+46    <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+47    <uses-permission android:name="android.permission.READ_CONTACTS" />
+47-->E:\notes\app\src\main\AndroidManifest.xml:31:5-72
+47-->E:\notes\app\src\main\AndroidManifest.xml:31:22-69
+48    <!-- 外存储写权限，构建语法需要用到此权限 -->
+49    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+49-->E:\notes\app\src\main\AndroidManifest.xml:27:5-81
+49-->E:\notes\app\src\main\AndroidManifest.xml:27:22-78
+50    <!-- 外存储读权限，构建语法需要用到此权限 -->
+51    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+51-->E:\notes\app\src\main\AndroidManifest.xml:52:5-79
+51-->E:\notes\app\src\main\AndroidManifest.xml:52:22-77
+52    <!-- 配置权限，用来记录应用配置信息 -->
+53    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+53-->E:\notes\app\src\main\AndroidManifest.xml:54:5-55:47
+53-->E:\notes\app\src\main\AndroidManifest.xml:54:22-70
+54    <!-- 手机定位信息，用来为语义等功能提供定位，提供更精准的服务 -->
+55    <!-- 定位信息是敏感信息，可通过Setting.setLocationEnable(false)关闭定位请求 -->
+56    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+56-->E:\notes\app\src\main\AndroidManifest.xml:58:5-78
+56-->E:\notes\app\src\main\AndroidManifest.xml:58:22-76
+57
+58    <application
+58-->E:\notes\app\src\main\AndroidManifest.xml:64:5-178:19
+59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+59-->[androidx.core:core:1.6.0] C:\Users\HP\.gradle\caches\transforms-3\a2c54b51ee15973f28cc82b4115a7f2b\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+60        android:debuggable="true"
+61        android:extractNativeLibs="true"
+62        android:icon="@drawable/icon_app"
+62-->E:\notes\app\src\main\AndroidManifest.xml:65:9-42
+63        android:label="@string/app_name" >
+63-->E:\notes\app\src\main\AndroidManifest.xml:66:9-41
+64        <activity
+64-->E:\notes\app\src\main\AndroidManifest.xml:67:9-80:20
+65            android:name="net.micode.notes.ui.NotesListActivity"
+65-->E:\notes\app\src\main\AndroidManifest.xml:68:13-49
+66            android:configChanges="keyboardHidden|orientation|screenSize"
+66-->E:\notes\app\src\main\AndroidManifest.xml:69:13-74
+67            android:label="@string/app_name"
+67-->E:\notes\app\src\main\AndroidManifest.xml:70:13-45
+68            android:launchMode="singleTop"
+68-->E:\notes\app\src\main\AndroidManifest.xml:71:13-43
+69            android:theme="@style/NoteTheme"
+69-->E:\notes\app\src\main\AndroidManifest.xml:72:13-45
+70            android:uiOptions="splitActionBarWhenNarrow"
+70-->E:\notes\app\src\main\AndroidManifest.xml:73:13-57
+71            android:windowSoftInputMode="adjustPan" >
+71-->E:\notes\app\src\main\AndroidManifest.xml:74:13-52
+72            <intent-filter>
+72-->E:\notes\app\src\main\AndroidManifest.xml:76:13-79:29
+73                <action android:name="android.intent.action.MAIN" />
+73-->E:\notes\app\src\main\AndroidManifest.xml:77:17-69
+73-->E:\notes\app\src\main\AndroidManifest.xml:77:25-66
+74
+75                <category android:name="android.intent.category.LAUNCHER" />
+75-->E:\notes\app\src\main\AndroidManifest.xml:78:17-77
+75-->E:\notes\app\src\main\AndroidManifest.xml:78:27-74
 76            </intent-filter>
-77            <intent-filter>
-77-->E:\notes\app\src\main\AndroidManifest.xml:73:13-76:29
-78                <action android:name="android.intent.action.SEARCH" />
-78-->E:\notes\app\src\main\AndroidManifest.xml:74:17-71
-78-->E:\notes\app\src\main\AndroidManifest.xml:74:25-68
-79
-80                <category android:name="android.intent.category.DEFAULT" />
-80-->E:\notes\app\src\main\AndroidManifest.xml:61:17-76
-80-->E:\notes\app\src\main\AndroidManifest.xml:61:27-73
-81            </intent-filter>
-82
-83            <meta-data
-83-->E:\notes\app\src\main\AndroidManifest.xml:78:13-80:54
-84                android:name="android.app.searchable"
-84-->E:\notes\app\src\main\AndroidManifest.xml:79:17-54
-85                android:resource="@xml/searchable" />
-85-->E:\notes\app\src\main\AndroidManifest.xml:80:17-51
-86        </activity>
+77        </activity>
+78        <activity
+78-->E:\notes\app\src\main\AndroidManifest.xml:82:9-110:20
+79            android:name="net.micode.notes.ui.NoteEditActivity"
+79-->E:\notes\app\src\main\AndroidManifest.xml:83:13-48
+80            android:configChanges="keyboardHidden|orientation|screenSize"
+80-->E:\notes\app\src\main\AndroidManifest.xml:84:13-74
+81            android:launchMode="singleTop"
+81-->E:\notes\app\src\main\AndroidManifest.xml:85:13-43
+82            android:theme="@style/NoteTheme" >
+82-->E:\notes\app\src\main\AndroidManifest.xml:86:13-45
+83            <intent-filter>
+83-->E:\notes\app\src\main\AndroidManifest.xml:88:13-93:29
+84                <action android:name="android.intent.action.VIEW" />
+84-->E:\notes\app\src\main\AndroidManifest.xml:89:17-69
+84-->E:\notes\app\src\main\AndroidManifest.xml:89:25-66
+85
+86                <category android:name="android.intent.category.DEFAULT" />
+86-->E:\notes\app\src\main\AndroidManifest.xml:90:17-76
+86-->E:\notes\app\src\main\AndroidManifest.xml:90:27-73
 87
-88        <provider
-88-->E:\notes\app\src\main\AndroidManifest.xml:83:9-86:43
-89            android:name="net.micode.notes.data.NotesProvider"
-89-->E:\notes\app\src\main\AndroidManifest.xml:84:13-63
-90            android:authorities="micode_notes"
-90-->E:\notes\app\src\main\AndroidManifest.xml:85:13-47
-91            android:multiprocess="true" />
-91-->E:\notes\app\src\main\AndroidManifest.xml:86:13-40
-92
-93        <receiver
-93-->E:\notes\app\src\main\AndroidManifest.xml:88:9-100:20
-94            android:name="net.micode.notes.widget.NoteWidgetProvider_2x"
-94-->E:\notes\app\src\main\AndroidManifest.xml:89:13-57
-95            android:label="@string/app_widget2x2" >
-95-->E:\notes\app\src\main\AndroidManifest.xml:90:13-50
-96            <intent-filter>
-96-->E:\notes\app\src\main\AndroidManifest.xml:91:13-95:29
-97                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-97-->E:\notes\app\src\main\AndroidManifest.xml:92:17-84
-97-->E:\notes\app\src\main\AndroidManifest.xml:92:25-81
-98                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
-98-->E:\notes\app\src\main\AndroidManifest.xml:93:17-85
-98-->E:\notes\app\src\main\AndroidManifest.xml:93:25-82
-99                <action android:name="android.intent.action.PRIVACY_MODE_CHANGED" />
-99-->E:\notes\app\src\main\AndroidManifest.xml:94:17-85
-99-->E:\notes\app\src\main\AndroidManifest.xml:94:25-82
-100            </intent-filter>
+88                <data android:mimeType="vnd.android.cursor.item/text_note" />
+88-->E:\notes\app\src\main\AndroidManifest.xml:91:17-78
+88-->E:\notes\app\src\main\AndroidManifest.xml:91:23-75
+89                <data android:mimeType="vnd.android.cursor.item/call_note" />
+89-->E:\notes\app\src\main\AndroidManifest.xml:91:17-78
+89-->E:\notes\app\src\main\AndroidManifest.xml:91:23-75
+90            </intent-filter>
+91            <intent-filter>
+91-->E:\notes\app\src\main\AndroidManifest.xml:95:13-100:29
+92                <action android:name="android.intent.action.INSERT_OR_EDIT" />
+92-->E:\notes\app\src\main\AndroidManifest.xml:96:17-79
+92-->E:\notes\app\src\main\AndroidManifest.xml:96:25-76
+93
+94                <category android:name="android.intent.category.DEFAULT" />
+94-->E:\notes\app\src\main\AndroidManifest.xml:90:17-76
+94-->E:\notes\app\src\main\AndroidManifest.xml:90:27-73
+95
+96                <data android:mimeType="vnd.android.cursor.item/text_note" />
+96-->E:\notes\app\src\main\AndroidManifest.xml:91:17-78
+96-->E:\notes\app\src\main\AndroidManifest.xml:91:23-75
+97                <data android:mimeType="vnd.android.cursor.item/call_note" />
+97-->E:\notes\app\src\main\AndroidManifest.xml:91:17-78
+97-->E:\notes\app\src\main\AndroidManifest.xml:91:23-75
+98            </intent-filter>
+99            <intent-filter>
+99-->E:\notes\app\src\main\AndroidManifest.xml:102:13-105:29
+100                <action android:name="android.intent.action.SEARCH" />
+100-->E:\notes\app\src\main\AndroidManifest.xml:103:17-71
+100-->E:\notes\app\src\main\AndroidManifest.xml:103:25-68
 101
-102            <meta-data
-102-->E:\notes\app\src\main\AndroidManifest.xml:97:13-99:58
-103                android:name="android.appwidget.provider"
-103-->E:\notes\app\src\main\AndroidManifest.xml:98:17-58
-104                android:resource="@xml/widget_2x_info" />
-104-->E:\notes\app\src\main\AndroidManifest.xml:99:17-55
-105        </receiver>
-106        <receiver
-106-->E:\notes\app\src\main\AndroidManifest.xml:101:9-114:20
-107            android:name="net.micode.notes.widget.NoteWidgetProvider_4x"
-107-->E:\notes\app\src\main\AndroidManifest.xml:102:13-57
-108            android:label="@string/app_widget4x4" >
-108-->E:\notes\app\src\main\AndroidManifest.xml:103:13-50
-109            <intent-filter>
-109-->E:\notes\app\src\main\AndroidManifest.xml:91:13-95:29
-110                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-110-->E:\notes\app\src\main\AndroidManifest.xml:92:17-84
-110-->E:\notes\app\src\main\AndroidManifest.xml:92:25-81
-111                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
-111-->E:\notes\app\src\main\AndroidManifest.xml:93:17-85
-111-->E:\notes\app\src\main\AndroidManifest.xml:93:25-82
-112                <action android:name="android.intent.action.PRIVACY_MODE_CHANGED" />
-112-->E:\notes\app\src\main\AndroidManifest.xml:94:17-85
-112-->E:\notes\app\src\main\AndroidManifest.xml:94:25-82
-113            </intent-filter>
+102                <category android:name="android.intent.category.DEFAULT" />
+102-->E:\notes\app\src\main\AndroidManifest.xml:90:17-76
+102-->E:\notes\app\src\main\AndroidManifest.xml:90:27-73
+103            </intent-filter>
+104
+105            <meta-data
+105-->E:\notes\app\src\main\AndroidManifest.xml:107:13-109:54
+106                android:name="android.app.searchable"
+106-->E:\notes\app\src\main\AndroidManifest.xml:108:17-54
+107                android:resource="@xml/searchable" />
+107-->E:\notes\app\src\main\AndroidManifest.xml:109:17-51
+108        </activity>
+109
+110        <provider
+110-->E:\notes\app\src\main\AndroidManifest.xml:112:9-115:43
+111            android:name="net.micode.notes.data.NotesProvider"
+111-->E:\notes\app\src\main\AndroidManifest.xml:113:13-63
+112            android:authorities="micode_notes"
+112-->E:\notes\app\src\main\AndroidManifest.xml:114:13-47
+113            android:multiprocess="true" />
+113-->E:\notes\app\src\main\AndroidManifest.xml:115:13-40
 114
-115            <meta-data
-115-->E:\notes\app\src\main\AndroidManifest.xml:97:13-99:58
-116                android:name="android.appwidget.provider"
-116-->E:\notes\app\src\main\AndroidManifest.xml:98:17-58
-117                android:resource="@xml/widget_4x_info" />
-117-->E:\notes\app\src\main\AndroidManifest.xml:99:17-55
-118        </receiver>
-119        <receiver android:name="net.micode.notes.ui.AlarmInitReceiver" >
-119-->E:\notes\app\src\main\AndroidManifest.xml:116:9-120:20
-119-->E:\notes\app\src\main\AndroidManifest.xml:116:19-55
-120            <intent-filter>
-120-->E:\notes\app\src\main\AndroidManifest.xml:117:13-119:29
-121                <action android:name="android.intent.action.BOOT_COMPLETED" />
-121-->E:\notes\app\src\main\AndroidManifest.xml:118:17-79
-121-->E:\notes\app\src\main\AndroidManifest.xml:118:25-76
+115        <receiver
+115-->E:\notes\app\src\main\AndroidManifest.xml:117:9-129:20
+116            android:name="net.micode.notes.widget.NoteWidgetProvider_2x"
+116-->E:\notes\app\src\main\AndroidManifest.xml:118:13-57
+117            android:label="@string/app_widget2x2" >
+117-->E:\notes\app\src\main\AndroidManifest.xml:119:13-50
+118            <intent-filter>
+118-->E:\notes\app\src\main\AndroidManifest.xml:120:13-124:29
+119                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+119-->E:\notes\app\src\main\AndroidManifest.xml:121:17-84
+119-->E:\notes\app\src\main\AndroidManifest.xml:121:25-81
+120                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
+120-->E:\notes\app\src\main\AndroidManifest.xml:122:17-85
+120-->E:\notes\app\src\main\AndroidManifest.xml:122:25-82
+121                <action android:name="android.intent.action.PRIVACY_MODE_CHANGED" />
+121-->E:\notes\app\src\main\AndroidManifest.xml:123:17-85
+121-->E:\notes\app\src\main\AndroidManifest.xml:123:25-82
 122            </intent-filter>
-123        </receiver>
-124        <receiver
-124-->E:\notes\app\src\main\AndroidManifest.xml:122:9-125:20
-125            android:name="net.micode.notes.ui.AlarmReceiver"
-125-->E:\notes\app\src\main\AndroidManifest.xml:123:13-61
-126            android:process=":remote" >
-126-->E:\notes\app\src\main\AndroidManifest.xml:124:13-38
+123
+124            <meta-data
+124-->E:\notes\app\src\main\AndroidManifest.xml:126:13-128:58
+125                android:name="android.appwidget.provider"
+125-->E:\notes\app\src\main\AndroidManifest.xml:127:17-58
+126                android:resource="@xml/widget_2x_info" />
+126-->E:\notes\app\src\main\AndroidManifest.xml:128:17-55
 127        </receiver>
-128
-129        <activity
-129-->E:\notes\app\src\main\AndroidManifest.xml:127:9-132:20
-130            android:name="net.micode.notes.ui.AlarmAlertActivity"
-130-->E:\notes\app\src\main\AndroidManifest.xml:128:13-50
-131            android:label="@string/app_name"
-131-->E:\notes\app\src\main\AndroidManifest.xml:129:13-45
-132            android:launchMode="singleInstance"
-132-->E:\notes\app\src\main\AndroidManifest.xml:130:13-48
-133            android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar" >
-133-->E:\notes\app\src\main\AndroidManifest.xml:131:13-75
-134        </activity>
-135        <activity
-135-->E:\notes\app\src\main\AndroidManifest.xml:134:9-139:20
-136            android:name="net.micode.notes.ui.NotesPreferenceActivity"
-136-->E:\notes\app\src\main\AndroidManifest.xml:135:13-71
-137            android:label="@string/preferences_title"
-137-->E:\notes\app\src\main\AndroidManifest.xml:136:13-54
-138            android:launchMode="singleTop"
-138-->E:\notes\app\src\main\AndroidManifest.xml:137:13-43
-139            android:theme="@android:style/Theme.Holo.Light" >
-139-->E:\notes\app\src\main\AndroidManifest.xml:138:13-60
-140        </activity>
-141
-142        <service
-142-->E:\notes\app\src\main\AndroidManifest.xml:141:9-144:19
-143            android:name="net.micode.notes.gtask.remote.GTaskSyncService"
-143-->E:\notes\app\src\main\AndroidManifest.xml:142:13-74
-144            android:exported="false" >
-144-->E:\notes\app\src\main\AndroidManifest.xml:143:13-37
-145        </service>
-146
-147        <meta-data
-147-->E:\notes\app\src\main\AndroidManifest.xml:146:9-148:52
-148            android:name="android.app.default_searchable"
-148-->E:\notes\app\src\main\AndroidManifest.xml:147:13-58
-149            android:value=".ui.NoteEditActivity" />
-149-->E:\notes\app\src\main\AndroidManifest.xml:148:13-49
-150    </application>
-151
-152</manifest>
+128        <receiver
+128-->E:\notes\app\src\main\AndroidManifest.xml:130:9-143:20
+129            android:name="net.micode.notes.widget.NoteWidgetProvider_4x"
+129-->E:\notes\app\src\main\AndroidManifest.xml:131:13-57
+130            android:label="@string/app_widget4x4" >
+130-->E:\notes\app\src\main\AndroidManifest.xml:132:13-50
+131            <intent-filter>
+131-->E:\notes\app\src\main\AndroidManifest.xml:120:13-124:29
+132                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+132-->E:\notes\app\src\main\AndroidManifest.xml:121:17-84
+132-->E:\notes\app\src\main\AndroidManifest.xml:121:25-81
+133                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
+133-->E:\notes\app\src\main\AndroidManifest.xml:122:17-85
+133-->E:\notes\app\src\main\AndroidManifest.xml:122:25-82
+134                <action android:name="android.intent.action.PRIVACY_MODE_CHANGED" />
+134-->E:\notes\app\src\main\AndroidManifest.xml:123:17-85
+134-->E:\notes\app\src\main\AndroidManifest.xml:123:25-82
+135            </intent-filter>
+136
+137            <meta-data
+137-->E:\notes\app\src\main\AndroidManifest.xml:126:13-128:58
+138                android:name="android.appwidget.provider"
+138-->E:\notes\app\src\main\AndroidManifest.xml:127:17-58
+139                android:resource="@xml/widget_4x_info" />
+139-->E:\notes\app\src\main\AndroidManifest.xml:128:17-55
+140        </receiver>
+141        <receiver android:name="net.micode.notes.ui.AlarmInitReceiver" >
+141-->E:\notes\app\src\main\AndroidManifest.xml:145:9-149:20
+141-->E:\notes\app\src\main\AndroidManifest.xml:145:19-55
+142            <intent-filter>
+142-->E:\notes\app\src\main\AndroidManifest.xml:146:13-148:29
+143                <action android:name="android.intent.action.BOOT_COMPLETED" />
+143-->E:\notes\app\src\main\AndroidManifest.xml:147:17-79
+143-->E:\notes\app\src\main\AndroidManifest.xml:147:25-76
+144            </intent-filter>
+145        </receiver>
+146        <receiver
+146-->E:\notes\app\src\main\AndroidManifest.xml:151:9-154:20
+147            android:name="net.micode.notes.ui.AlarmReceiver"
+147-->E:\notes\app\src\main\AndroidManifest.xml:152:13-61
+148            android:process=":remote" >
+148-->E:\notes\app\src\main\AndroidManifest.xml:153:13-38
+149        </receiver>
+150
+151        <activity
+151-->E:\notes\app\src\main\AndroidManifest.xml:156:9-161:20
+152            android:name="net.micode.notes.ui.AlarmAlertActivity"
+152-->E:\notes\app\src\main\AndroidManifest.xml:157:13-50
+153            android:label="@string/app_name"
+153-->E:\notes\app\src\main\AndroidManifest.xml:158:13-45
+154            android:launchMode="singleInstance"
+154-->E:\notes\app\src\main\AndroidManifest.xml:159:13-48
+155            android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar" >
+155-->E:\notes\app\src\main\AndroidManifest.xml:160:13-75
+156        </activity>
+157        <activity
+157-->E:\notes\app\src\main\AndroidManifest.xml:163:9-168:20
+158            android:name="net.micode.notes.ui.NotesPreferenceActivity"
+158-->E:\notes\app\src\main\AndroidManifest.xml:164:13-71
+159            android:label="@string/preferences_title"
+159-->E:\notes\app\src\main\AndroidManifest.xml:165:13-54
+160            android:launchMode="singleTop"
+160-->E:\notes\app\src\main\AndroidManifest.xml:166:13-43
+161            android:theme="@android:style/Theme.Holo.Light" >
+161-->E:\notes\app\src\main\AndroidManifest.xml:167:13-60
+162        </activity>
+163
+164        <service
+164-->E:\notes\app\src\main\AndroidManifest.xml:170:9-173:19
+165            android:name="net.micode.notes.gtask.remote.GTaskSyncService"
+165-->E:\notes\app\src\main\AndroidManifest.xml:171:13-74
+166            android:exported="false" >
+166-->E:\notes\app\src\main\AndroidManifest.xml:172:13-37
+167        </service>
+168
+169        <meta-data
+169-->E:\notes\app\src\main\AndroidManifest.xml:175:9-177:52
+170            android:name="android.app.default_searchable"
+170-->E:\notes\app\src\main\AndroidManifest.xml:176:13-58
+171            android:value=".ui.NoteEditActivity" />
+171-->E:\notes\app\src\main\AndroidManifest.xml:177:13-49
+172    </application>
+173
+174</manifest>
