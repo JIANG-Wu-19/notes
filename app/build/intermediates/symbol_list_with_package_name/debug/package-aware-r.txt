@@ -225,6 +225,7 @@ id menu_font_size
 id menu_list_mode
 id menu_new_folder
 id menu_new_note
+id menu_read
 id menu_search
 id menu_send_to_desktop
 id menu_setting
@@ -311,7 +312,6 @@ string alert_message_delete_folder
 string alert_message_delete_note
 string alert_message_delete_notes
 string alert_title_delete
-string app_id
 string app_name
 string app_widget2x2
 string app_widget4x4
@@ -356,6 +356,7 @@ string menu_list_mode
 string menu_move
 string menu_move_parent_folder
 string menu_normal_mode
+string menu_read
 string menu_remove_remind
 string menu_search
 string menu_select_all

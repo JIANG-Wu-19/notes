@@ -32,6 +32,8 @@ import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.speech.tts.TextToSpeech;
+import android.speech.tts.TextToSpeech.OnInitListener;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -87,6 +89,7 @@ import net.micode.notes.speech.util.JsonParser;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -95,6 +98,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import androidx.core.app.ActivityCompat;
+
+import org.w3c.dom.Text;
 
 
 public class NoteEditActivity extends Activity implements OnClickListener,
@@ -190,6 +195,8 @@ public class NoteEditActivity extends Activity implements OnClickListener,
     private Toast mToast;
     private String mEngineType = "cloud";
     ///////////end code//////////////////////
+
+    private TextToSpeech mTTs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -427,6 +434,8 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         return true;
     }
 
+
+
     private void initResources() {
         mHeadViewPanel = findViewById(R.id.note_title);
         mNoteHeaderHolder = new HeadViewHolder();
@@ -461,6 +470,22 @@ public class NoteEditActivity extends Activity implements OnClickListener,
             mFontSizeId = ResourceParser.BG_DEFAULT_FONT_SIZE;
         }
         mEditTextList = (LinearLayout) findViewById(R.id.note_edit_list);
+
+        mTTs=new TextToSpeech(this, new OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status==TextToSpeech.SUCCESS){
+                    int result=mTTs.setLanguage(Locale.getDefault());
+                }
+            }
+        });
+
+
+
+    }
+
+    private void textToSpeech(){
+        mTTs.speak(mNoteEditor.getText().toString(), TextToSpeech.QUEUE_FLUSH,null);
     }
 
     @Override
@@ -627,6 +652,8 @@ public class NoteEditActivity extends Activity implements OnClickListener,
             setReminder();
         }else if(item.getItemId()==R.id.menu_delete_remind){
             mWorkingNote.setAlertDate(0, false);
+        }else if(item.getItemId()==R.id.menu_read){
+            textToSpeech();
         }
         return true;
     }

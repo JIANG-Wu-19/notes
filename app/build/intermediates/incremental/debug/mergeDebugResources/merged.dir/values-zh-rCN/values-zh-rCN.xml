@@ -70,6 +70,7 @@
     <string name="menu_move">移动到文件夹</string>
     <string name="menu_move_parent_folder">上一级文件夹</string>
     <string name="menu_normal_mode">退出清单模式</string>
+    <string name="menu_read">朗读</string>
     <string name="menu_remove_remind">删除提醒</string>
     <string name="menu_search">搜索</string>
     <string name="menu_select_all">全选</string>
