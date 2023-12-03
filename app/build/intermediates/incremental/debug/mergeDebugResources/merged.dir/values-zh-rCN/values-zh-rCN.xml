@@ -25,6 +25,7 @@
     <plurals name="search_results_title">
         <item quantity="other"><ns1:g id="NUMBER">%1$s</ns1:g> 条符合“<ns1:g id="SEARCH">%2$s</ns1:g>”的搜索结果</item>
     </plurals>
+    <string name="Cancel_top">取消置顶</string>
     <string name="alert_message_delete_folder">确认删除文件夹及所包含的便签吗？</string>
     <string name="alert_message_delete_note">确认要删除该条便签吗?</string>
     <string name="alert_message_delete_notes">确认要删除所选的 %d 条便签吗?</string>
@@ -82,11 +83,13 @@
     <string name="menu_sync">同步</string>
     <string name="menu_sync_cancel">取消同步</string>
     <string name="menu_title_select_folder">选择文件夹</string>
+    <string name="menu_top">置顶</string>
     <string name="note_alert_expired">已过期</string>
     <string name="note_link_email">发送邮件</string>
     <string name="note_link_other">打开地图</string>
     <string name="note_link_tel">呼叫电话</string>
     <string name="note_link_web">浏览网页</string>
+    <string name="note_top">置顶</string>
     <string name="notealert_enter">查看</string>
     <string name="notealert_ok">知道了</string>
     <string name="notelist_menu_new">新建便签</string>

@@ -37,6 +37,14 @@ public class WorkingNote {
     private Note mNote;
     // Note Id
     private long mNoteId;
+//    private long mId;
+//    private long mCreatedDate;
+//    private int mHasAttachment;
+//
+//    private long mParentId;
+//    private String mSnippet;
+//    private int mType;
+//    private long mVersion;
     // Note content
     private String mContent;
     // Note mode
@@ -60,7 +68,11 @@ public class WorkingNote {
 
     private boolean mIsDeleted;
 
+    private String mTop;
+
     private NoteSettingChangedListener mNoteSettingStatusListener;
+
+
 
     public static final String[] DATA_PROJECTION = new String[] {
             DataColumns.ID,
@@ -72,13 +84,35 @@ public class WorkingNote {
             DataColumns.DATA4,
     };
 
+//    public static final String[] PROJECTION_NOTE = new String[] {
+//            NoteColumns.ID,
+//            NoteColumns.ALERTED_DATE,
+//            NoteColumns.BG_COLOR_ID,
+//            NoteColumns.CREATED_DATE,
+//            NoteColumns.HAS_ATTACHMENT,
+//            NoteColumns.MODIFIED_DATE,
+//            NoteColumns.NOTES_COUNT,
+//            NoteColumns.PARENT_ID,
+//            NoteColumns.SNIPPET,
+//            NoteColumns.TYPE,
+//            NoteColumns.WIDGET_ID,
+//            NoteColumns.WIDGET_TYPE,
+//            NoteColumns.SYNC_ID,
+//            NoteColumns.LOCAL_MODIFIED,
+//            NoteColumns.ORIGIN_PARENT_ID,
+//            NoteColumns.GTASK_ID,
+//            NoteColumns.VERSION,
+//            NoteColumns.TOP
+//    };
+
     public static final String[] NOTE_PROJECTION = new String[] {
             NoteColumns.PARENT_ID,
             NoteColumns.ALERTED_DATE,
             NoteColumns.BG_COLOR_ID,
             NoteColumns.WIDGET_ID,
             NoteColumns.WIDGET_TYPE,
-            NoteColumns.MODIFIED_DATE
+            NoteColumns.MODIFIED_DATE,
+            NoteColumns.TOP
     };
 
     private static final int DATA_ID_COLUMN = 0;
@@ -101,6 +135,30 @@ public class WorkingNote {
 
     private static final int NOTE_MODIFIED_DATE_COLUMN = 5;
 
+    private static final int NOTE_TOP_COLUMN = 6;
+
+
+//    private static final int ID_COLUMN=0;
+//    private static final int ALERTED_DATE_COLUMN=2;
+//    private static final int BG_COLOR_ID_COLUMN=3;
+//    private static final int CREATED_DATE_COLUMN=4;
+//    private static final int HAS_ATTACHMENT_COLUMN=5;
+//    private static final int MODIFIED_DATE_COLUMN=6;
+//    private static final int PARENT_ID_COLUMN=1;
+//    private static final int SNIPPET_COLUMN=8;
+//    private static final int TYPE_COLUMN=9;
+//    private static final int WIDGET_ID_COLUMN=10;
+//    private static final int WIDGET_TYPE_COLUMN=11;
+//    private static final int VERSION_COLUMN=16;
+//    public static final int TOP_COLUMN=17;
+
+
+
+
+//    public String getmTop(){
+//        return mTop;
+//    }
+
     // New note construct
     private WorkingNote(Context context, long folderId) {
         mContext = context;
@@ -112,6 +170,7 @@ public class WorkingNote {
         mIsDeleted = false;
         mMode = 0;
         mWidgetType = Notes.TYPE_WIDGET_INVALIDE;
+        mTop = "0";
     }
 
     // Existing note construct
@@ -121,6 +180,7 @@ public class WorkingNote {
         mFolderId = folderId;
         mIsDeleted = false;
         mNote = new Note();
+//        mTop=String.valueOf(getTopId());
         loadNote();
     }
 
@@ -137,6 +197,7 @@ public class WorkingNote {
                 mWidgetType = cursor.getInt(NOTE_WIDGET_TYPE_COLUMN);
                 mAlertDate = cursor.getLong(NOTE_ALERTED_DATE_COLUMN);
                 mModifiedDate = cursor.getLong(NOTE_MODIFIED_DATE_COLUMN);
+                mTop=cursor.getString(NOTE_TOP_COLUMN);
             }
             cursor.close();
         } else {
@@ -173,6 +234,22 @@ public class WorkingNote {
             throw new IllegalArgumentException("Unable to find note's data with id " + mNoteId);
         }
     }
+
+//    private void loadFromCursor(Cursor c) {
+//        mId = c.getLong(ID_COLUMN);
+//        mAlertDate = c.getLong(ALERTED_DATE_COLUMN);
+//        mBgColorId = c.getInt(BG_COLOR_ID_COLUMN);
+//        mCreatedDate = c.getLong(CREATED_DATE_COLUMN);
+//        mHasAttachment = c.getInt(HAS_ATTACHMENT_COLUMN);
+//        mModifiedDate = c.getLong(MODIFIED_DATE_COLUMN);
+//        mParentId = c.getLong(PARENT_ID_COLUMN);
+//        mSnippet = c.getString(SNIPPET_COLUMN);
+//        mType = c.getInt(TYPE_COLUMN);
+//        mWidgetId = c.getInt(WIDGET_ID_COLUMN);
+//        mWidgetType = c.getInt(WIDGET_TYPE_COLUMN);
+//        mVersion = c.getLong(VERSION_COLUMN);
+//        mTop = c.getString(TOP_COLUMN);
+//    }
 
     public static WorkingNote createEmptyNote(Context context, long folderId, int widgetId,
             int widgetType, int defaultBgColorId) {
@@ -288,6 +365,13 @@ public class WorkingNote {
         }
     }
 
+    public void setTop(String Top) {
+        if(Top!=mTop){
+            mTop=Top;
+            mNote.setNoteValue(NoteColumns.TOP,mTop);
+        }
+    }
+
     public void convertToCallNote(String phoneNumber, long callDate) {
         mNote.setCallData(CallNote.CALL_DATE, String.valueOf(callDate));
         mNote.setCallData(CallNote.PHONE_NUMBER, phoneNumber);
@@ -340,6 +424,14 @@ public class WorkingNote {
 
     public int getWidgetType() {
         return mWidgetType;
+    }
+
+    public int getTopId() {
+        if(mTop.equals("1")){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 
     public interface NoteSettingChangedListener {

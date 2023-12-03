@@ -136,6 +136,7 @@
         
         <item quantity="other"><ns1:g example="15" id="number">%1$s</ns1:g> results for \"<ns1:g example="???" id="search">%2$s</ns1:g>\"</item>
     </plurals>
+    <string name="Cancel_top">Cancel top</string>
     <string name="alert_message_delete_folder">Confirm to delete folder and its notes?</string>
     <string name="alert_message_delete_note">Confirm to delete this note?</string>
     <string name="alert_message_delete_notes">Confirm to delete the selected %d notes?</string>
@@ -196,11 +197,13 @@
     <string name="menu_sync">Sync</string>
     <string name="menu_sync_cancel">Cancel syncing</string>
     <string name="menu_title_select_folder">Select folder</string>
+    <string name="menu_top">Top</string>
     <string name="note_alert_expired">Expired</string>
     <string name="note_link_email">Send email</string>
     <string name="note_link_other">Open map</string>
     <string name="note_link_tel">Call</string>
     <string name="note_link_web">Browse web</string>
+    <string name="note_top">top</string>
     <string name="notealert_enter">Take a look</string>
     <string name="notealert_ok">Got it</string>
     <string name="notelist_menu_new">Add note</string>

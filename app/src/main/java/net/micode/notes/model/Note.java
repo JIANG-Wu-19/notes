@@ -76,6 +76,12 @@ public class Note {
         mNoteDiffValues.put(NoteColumns.MODIFIED_DATE, System.currentTimeMillis());
     }
 
+//    public void setTopValue(String key, String value) {
+//        mNoteDiffValues.put(key, value);
+//        mNoteDiffValues.put(NoteColumns.LOCAL_MODIFIED, 1);
+//        mNoteDiffValues.put(NoteColumns.MODIFIED_DATE, System.currentTimeMillis());
+//    }
+
     public void setTextData(String key, String value) {
         mNoteData.setTextData(key, value);
     }
@@ -95,6 +101,8 @@ public class Note {
     public void setCallData(String key, String value) {
         mNoteData.setCallData(key, value);
     }
+
+
 
     public boolean isLocalModified() {
         return mNoteDiffValues.size() > 0 || mNoteData.isLocalModified();
@@ -131,6 +139,7 @@ public class Note {
     }
 
     private class NoteData {
+
         private long mTextDataId;
 
         private ContentValues mTextDataValues;
@@ -177,6 +186,8 @@ public class Note {
             mNoteDiffValues.put(NoteColumns.LOCAL_MODIFIED, 1);
             mNoteDiffValues.put(NoteColumns.MODIFIED_DATE, System.currentTimeMillis());
         }
+
+
 
         Uri pushIntoContentResolver(Context context, long noteId) {
             /**

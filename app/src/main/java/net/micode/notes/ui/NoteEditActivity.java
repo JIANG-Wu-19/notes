@@ -601,6 +601,13 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         }
         clearSettingState();
         menu.clear();
+
+//        if(mWorkingNote.getTopId()==1){
+//            menu.findItem(R.id.menu_top).setTitle(R.string.note_top);
+//        } else{
+//            menu.findItem(R.id.menu_top).setTitle(R.string.Cancel_top);
+//        }
+        
         if (mWorkingNote.getFolderId() == Notes.ID_CALL_RECORD_FOLDER) {
             getMenuInflater().inflate(R.menu.call_note_edit, menu);
         } else {
@@ -623,7 +630,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId()==R.id.menu_new_note){
             createNewNote();
-        } else if (item.getItemId()==R.id.menu_new_note) {
+        } else if (item.getItemId()==R.id.menu_delete) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle(getString(R.string.alert_title_delete));
             builder.setIcon(android.R.drawable.ic_dialog_alert);
@@ -654,6 +661,9 @@ public class NoteEditActivity extends Activity implements OnClickListener,
             mWorkingNote.setAlertDate(0, false);
         }else if(item.getItemId()==R.id.menu_read){
             textToSpeech();
+        }
+        else if(item.getItemId()==R.id.menu_top){
+            mWorkingNote.setTop((mWorkingNote.getTopId())==1 ? "0" : "1");
         }
         return true;
     }

@@ -231,6 +231,7 @@ id menu_send_to_desktop
 id menu_setting
 id menu_share
 id menu_sync
+id menu_top
 id minute
 id move
 id navigation_bar
@@ -308,6 +309,7 @@ menu note_list_options
 menu sub_folder
 plurals search_results_title
 raw introduction
+string Cancel_top
 string alert_message_delete_folder
 string alert_message_delete_note
 string alert_message_delete_notes
@@ -368,11 +370,13 @@ string menu_share
 string menu_sync
 string menu_sync_cancel
 string menu_title_select_folder
+string menu_top
 string note_alert_expired
 string note_link_email
 string note_link_other
 string note_link_tel
 string note_link_web
+string note_top
 string notealert_enter
 string notealert_ok
 string notelist_menu_new

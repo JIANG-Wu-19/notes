@@ -64,6 +64,7 @@
     <string name="menu_alert">提醒我</string>
     <string name="menu_remove_remind">删除提醒</string>
     <string name="menu_read">朗读</string>
+    <string name="menu_top">置顶</string>
     <string name="menu_title_select_folder">选择文件夹</string>
     <string name="menu_move_parent_folder">上一级文件夹</string>
     <string name="info_note_enter_desktop">已添加到桌面</string>
@@ -155,5 +156,9 @@
     <plurals name="search_results_title">
         <item quantity="other"><xliff:g id="NUMBER">%1$s</xliff:g> 条符合“<xliff:g id="SEARCH">%2$s</xliff:g>”的搜索结果</item>
     </plurals>
+
+    <string name="note_top">置顶</string>
+    <string name="Cancel_top">取消置顶</string>
+
 
 </resources>
