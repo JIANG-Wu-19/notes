@@ -85,6 +85,7 @@ drawable widget_4x_yellow
 id account_dialog_subtitle
 id account_dialog_title
 id action_select_all
+id add_img_btn
 id amPm
 id btn_new_note
 id btn_set_bg_color

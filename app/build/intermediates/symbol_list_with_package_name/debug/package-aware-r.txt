@@ -176,6 +176,7 @@ id action_image
 id action_select_all
 id action_text
 id actions
+id add_img_btn
 id amPm
 id async
 id blocking

@@ -46,7 +46,7 @@ public class WorkingNote {
 //    private int mType;
 //    private long mVersion;
     // Note content
-    private String mContent;
+    public String mContent;
     // Note mode
     private int mMode;
 

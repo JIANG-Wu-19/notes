@@ -175,6 +175,7 @@ int id action_image 0x7f060025
 int id action_select_all 0x7f060026
 int id action_text 0x7f060027
 int id actions 0x7f060028
+int id add_img_btn 0x7f06008f
 int id amPm 0x7f060029
 int id async 0x7f06002a
 int id blocking 0x7f06002b
