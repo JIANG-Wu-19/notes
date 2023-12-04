@@ -111,6 +111,8 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
 
     private int mDispatchY;
 
+    private int mode=0;
+
     private TextView mTitleBar;
 
     private long mCurrentFolderId;
@@ -139,6 +141,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note_list);
+        getWindow().setBackgroundDrawableResource(R.drawable.list_background);
         initResources();
 
         /**
@@ -769,6 +772,26 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         } else {
             Log.e(TAG, "Wrong state:" + mState);
         }
+
+        switch (mode){
+            case 1:
+                menu.findItem(R.id.menu_hushui).setVisible(false);
+                break;
+            case 2:
+                menu.findItem(R.id.menu_jiguang).setVisible(false);
+                break;
+            case 3:
+                menu.findItem(R.id.menu_katong).setVisible(false);
+                break;
+            case 4:
+                menu.findItem(R.id.menu_shuiguo).setVisible(false);
+                break;
+            case 5:
+                menu.findItem(R.id.menu_chengshi).setVisible(false);
+                break;
+            default:
+                break;
+        }
         return true;
     }
 
@@ -794,6 +817,21 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             createNewNote();
         }else if(item.getItemId()==R.id.menu_search){
             onSearchRequested();
+        }else if(item.getItemId()==R.id.menu_hushui){
+            mode=1;
+            getWindow().setBackgroundDrawableResource(R.drawable.hushui);
+        }else if(item.getItemId()==R.id.menu_jiguang){
+            mode=2;
+            getWindow().setBackgroundDrawableResource(R.drawable.jiguang);
+        }else if(item.getItemId()==R.id.menu_katong){
+            mode=3;
+            getWindow().setBackgroundDrawableResource(R.drawable.katong);
+        }else if(item.getItemId()==R.id.menu_shuiguo){
+            mode=4;
+            getWindow().setBackgroundDrawableResource(R.drawable.shuiguo);
+        }else if(item.getItemId()==R.id.menu_chengshi){
+            mode=5;
+            getWindow().setBackgroundDrawableResource(R.drawable.chengshi);
         }
 
         return true;

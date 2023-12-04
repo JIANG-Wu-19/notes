@@ -55,6 +55,7 @@
     <string name="hint_foler_name">请输入名称</string>
     <string name="info_note_enter_desktop">已添加到桌面</string>
     <string name="menu_alert">提醒我</string>
+    <string name="menu_chengshi">背景:城市</string>
     <string name="menu_create_folder">新建文件夹</string>
     <string name="menu_delete">删除</string>
     <string name="menu_delete_passcode">删除密码</string>
@@ -68,6 +69,9 @@
     <string name="menu_font_size">文字大小</string>
     <string name="menu_font_small">小</string>
     <string name="menu_font_super">超大</string>
+    <string name="menu_hushui">背景:湖水</string>
+    <string name="menu_jiguang">背景:极光</string>
+    <string name="menu_katong">背景:卡通</string>
     <string name="menu_list_mode">进入清单模式</string>
     <string name="menu_move">移动到文件夹</string>
     <string name="menu_move_parent_folder">上一级文件夹</string>
@@ -82,6 +86,7 @@
     <string name="menu_set_passcode">设置密码</string>
     <string name="menu_setting">设置</string>
     <string name="menu_share">分享</string>
+    <string name="menu_shuiguo">背景:水果</string>
     <string name="menu_sync">同步</string>
     <string name="menu_sync_cancel">取消同步</string>
     <string name="menu_title_select_folder">选择文件夹</string>

@@ -59,6 +59,7 @@ int dimen text_font_size_super 0x7f04001a
 int drawable bg_btn_set_color 0x7f050000
 int drawable bg_color_btn_mask 0x7f050001
 int drawable call_record 0x7f050002
+int drawable chengshi 0x7f05004e
 int drawable clock 0x7f050003
 int drawable delete 0x7f050004
 int drawable dropdown_icon 0x7f050005
@@ -77,7 +78,10 @@ int drawable font_normal 0x7f050011
 int drawable font_size_selector_bg 0x7f050012
 int drawable font_small 0x7f050013
 int drawable font_super 0x7f050014
+int drawable hushui 0x7f05004f
 int drawable icon_app 0x7f050015
+int drawable jiguang 0x7f050050
+int drawable katong 0x7f050051
 int drawable list_background 0x7f050016
 int drawable list_blue_down 0x7f050017
 int drawable list_blue_middle 0x7f050018
@@ -122,6 +126,7 @@ int drawable notification_tile_bg 0x7f05003e
 int drawable notify_panel_notification_icon_bg 0x7f05003f
 int drawable search_result 0x7f050040
 int drawable selected 0x7f050041
+int drawable shuiguo 0x7f050052
 int drawable title_alert 0x7f050042
 int drawable title_bar_bg 0x7f050043
 int drawable widget_2x_blue 0x7f050044
@@ -218,11 +223,15 @@ int id ll_font_normal 0x7f06004f
 int id ll_font_small 0x7f060050
 int id ll_font_super 0x7f060051
 int id menu_alert 0x7f060052
+int id menu_chengshi 0x7f060092
 int id menu_delete 0x7f060053
 int id menu_delete_passcode 0x7f060090
 int id menu_delete_remind 0x7f060054
 int id menu_export_text 0x7f060055
 int id menu_font_size 0x7f060056
+int id menu_hushui 0x7f060093
+int id menu_jiguang 0x7f060094
+int id menu_katong 0x7f060095
 int id menu_list_mode 0x7f060057
 int id menu_new_folder 0x7f060058
 int id menu_new_note 0x7f060059
@@ -232,6 +241,7 @@ int id menu_send_to_desktop 0x7f06005c
 int id menu_set_passcode 0x7f060091
 int id menu_setting 0x7f06005d
 int id menu_share 0x7f06005e
+int id menu_shuiguo 0x7f060096
 int id menu_sync 0x7f06005f
 int id menu_top 0x7f060060
 int id minute 0x7f060061
@@ -344,6 +354,7 @@ int string format_move_notes_to_folder 0x7f0c001d
 int string hint_foler_name 0x7f0c001e
 int string info_note_enter_desktop 0x7f0c001f
 int string menu_alert 0x7f0c0020
+int string menu_chengshi 0x7f0c0072
 int string menu_create_folder 0x7f0c0021
 int string menu_delete 0x7f0c0022
 int string menu_delete_passcode 0x7f0c0070
@@ -357,6 +368,9 @@ int string menu_font_normal 0x7f0c0029
 int string menu_font_size 0x7f0c002a
 int string menu_font_small 0x7f0c002b
 int string menu_font_super 0x7f0c002c
+int string menu_hushui 0x7f0c0073
+int string menu_jiguang 0x7f0c0074
+int string menu_katong 0x7f0c0075
 int string menu_list_mode 0x7f0c002d
 int string menu_move 0x7f0c002e
 int string menu_move_parent_folder 0x7f0c002f
@@ -371,6 +385,7 @@ int string menu_send_to_desktop 0x7f0c0037
 int string menu_set_passcode 0x7f0c0071
 int string menu_setting 0x7f0c0038
 int string menu_share 0x7f0c0039
+int string menu_shuiguo 0x7f0c0076
 int string menu_sync 0x7f0c003a
 int string menu_sync_cancel 0x7f0c003b
 int string menu_title_select_folder 0x7f0c003c

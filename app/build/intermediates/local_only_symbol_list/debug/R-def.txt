@@ -19,6 +19,7 @@ dimen text_font_size_super
 drawable bg_btn_set_color
 drawable bg_color_btn_mask
 drawable call_record
+drawable chengshi
 drawable clock
 drawable delete
 drawable dropdown_icon
@@ -37,7 +38,10 @@ drawable font_normal
 drawable font_size_selector_bg
 drawable font_small
 drawable font_super
+drawable hushui
 drawable icon_app
+drawable jiguang
+drawable katong
 drawable list_background
 drawable list_blue_down
 drawable list_blue_middle
@@ -70,6 +74,7 @@ drawable note_edit_color_selector_panel
 drawable notification
 drawable search_result
 drawable selected
+drawable shuiguo
 drawable title_alert
 drawable title_bar_bg
 drawable widget_2x_blue
@@ -117,11 +122,15 @@ id ll_font_normal
 id ll_font_small
 id ll_font_super
 id menu_alert
+id menu_chengshi
 id menu_delete
 id menu_delete_passcode
 id menu_delete_remind
 id menu_export_text
 id menu_font_size
+id menu_hushui
+id menu_jiguang
+id menu_katong
 id menu_list_mode
 id menu_new_folder
 id menu_new_note
@@ -131,6 +140,7 @@ id menu_send_to_desktop
 id menu_set_passcode
 id menu_setting
 id menu_share
+id menu_shuiguo
 id menu_sync
 id menu_top
 id minute
@@ -212,6 +222,7 @@ string format_move_notes_to_folder
 string hint_foler_name
 string info_note_enter_desktop
 string menu_alert
+string menu_chengshi
 string menu_create_folder
 string menu_delete
 string menu_delete_passcode
@@ -225,6 +236,9 @@ string menu_font_normal
 string menu_font_size
 string menu_font_small
 string menu_font_super
+string menu_hushui
+string menu_jiguang
+string menu_katong
 string menu_list_mode
 string menu_move
 string menu_move_parent_folder
@@ -239,6 +253,7 @@ string menu_send_to_desktop
 string menu_set_passcode
 string menu_setting
 string menu_share
+string menu_shuiguo
 string menu_sync
 string menu_sync_cancel
 string menu_title_select_folder

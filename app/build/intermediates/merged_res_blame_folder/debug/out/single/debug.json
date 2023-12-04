@@ -40,6 +40,14 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\drawable-hdpi\\list_blue_up.9.png"
     },
     {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\drawable-hdpi_katong.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\drawable-hdpi\\katong.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\drawable-hdpi_chengshi.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\drawable-hdpi\\chengshi.png"
+    },
+    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\xml_widget_2x_info.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\xml\\widget_2x_info.xml"
     },
@@ -86,6 +94,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\xml_preferences.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\xml\\preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\drawable-hdpi_hushui.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\drawable-hdpi\\hushui.png"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\drawable-hdpi_call_record.png.flat",
@@ -148,8 +160,8 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\layout\\note_edit.xml"
     },
     {
-        "merged": "net.micode.notes.app-merged_res-6:/menu_note_edit.xml.flat",
-        "source": "net.micode.notes.app-main-8:/menu/note_edit.xml"
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\drawable-hdpi_shuiguo.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\drawable-hdpi\\shuiguo.png"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\xml_widget_4x_info.xml.flat",
@@ -182,6 +194,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\drawable-hdpi_list_red_single.9.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\drawable-hdpi\\list_red_single.9.png"
+    },
+    {
+        "merged": "net.micode.notes.app-merged_res-6:/layout_note_list.xml.flat",
+        "source": "net.micode.notes.app-main-8:/layout/note_list.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\layout_folder_list_item.xml.flat",
@@ -226,6 +242,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\drawable-hdpi_widget_4x_white.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\drawable-hdpi\\widget_4x_white.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\drawable-hdpi_jiguang.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-main-8:\\drawable-hdpi\\jiguang.png"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.0\\net.micode.notes.app-merged_res-6:\\layout_add_account_text.xml.flat",

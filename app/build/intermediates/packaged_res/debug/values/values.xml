@@ -88,6 +88,7 @@
     <string name="hint_foler_name">Input name</string>
     <string name="info_note_enter_desktop">Note added to home</string>
     <string name="menu_alert">Remind me</string>
+    <string name="menu_chengshi">Background:chengshi</string>
     <string name="menu_create_folder">New Folder</string>
     <string name="menu_delete">Delete</string>
     <string name="menu_delete_passcode">Delete password</string>
@@ -101,6 +102,9 @@
     <string name="menu_font_size">Font size</string>
     <string name="menu_font_small">Small</string>
     <string name="menu_font_super">Super</string>
+    <string name="menu_hushui">Background:hushui</string>
+    <string name="menu_jiguang">Background:jiguang</string>
+    <string name="menu_katong">Background:katong</string>
     <string name="menu_list_mode">Enter check list</string>
     <string name="menu_move">Move to folder</string>
     <string name="menu_move_parent_folder">Parent folder</string>
@@ -115,6 +119,7 @@
     <string name="menu_set_passcode">Set password</string>
     <string name="menu_setting">Settings</string>
     <string name="menu_share">Share</string>
+    <string name="menu_shuiguo">Background:shuiguo</string>
     <string name="menu_sync">Sync</string>
     <string name="menu_sync_cancel">Cancel syncing</string>
     <string name="menu_title_select_folder">Select folder</string>
