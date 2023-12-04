@@ -63,6 +63,7 @@ public class Notes {
 
     public interface NoteColumns {
 
+        public static final String PASSWORD="password";
         public static final String TOP="top";
         /**
          * The unique ID for a row

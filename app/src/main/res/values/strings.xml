@@ -71,6 +71,8 @@
     <string name="menu_title_select_folder">Select folder</string>
     <string name="menu_top">Top</string>
     <string name="menu_move_parent_folder">Parent folder</string>
+    <string name="menu_set_passcode">Set password</string>
+    <string name="menu_delete_passcode">Delete password</string>
     <string name="info_note_enter_desktop">Note added to home</string>
     <string name="alert_message_delete_folder">Confirm to delete folder and its notes?</string>
     <string name="alert_title_delete">Delete selected notes</string>
@@ -187,6 +189,13 @@
 
     <string name="note_top">top</string>
     <string name="Cancel_top">Cancel top</string>
+
+    <string name="menu_hushui">Background:hushui</string>
+    <string name="menu_jiguang">Background:jiguang</string>
+    <string name="menu_katong">Background:katong</string>
+    <string name="menu_shuiguo">Background:shuiguo</string>
+    <string name="menu_chengshi">Background:chengshi</string>
+
 
 
 </resources>

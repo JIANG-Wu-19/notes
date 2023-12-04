@@ -20,6 +20,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.PendingIntent;
 import android.app.SearchManager;
 import android.appwidget.AppWidgetManager;
@@ -60,6 +61,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -196,6 +198,8 @@ public class NoteEditActivity extends Activity implements OnClickListener,
 
     private String mUserQuery;
     private Pattern mPattern;
+
+    private String mPassword;
 
     private final int PHOTO_REQUEST = 1;//请求码
 
@@ -432,6 +436,42 @@ public class NoteEditActivity extends Activity implements OnClickListener,
                 mWorkingNote.getModifiedDate(), DateUtils.FORMAT_SHOW_DATE
                         | DateUtils.FORMAT_NUMERIC_DATE | DateUtils.FORMAT_SHOW_TIME
                         | DateUtils.FORMAT_SHOW_YEAR));
+
+        mPassword = mWorkingNote.getPassword();//读取数据库中的密码
+        if (mPassword!=null) {
+            //创建dialog，插入edittext，用户输入密码并做出检验。
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            View view = LayoutInflater.from(this).inflate(R.layout.dialog_edit_text, null);
+            //编辑Text
+            final EditText etName = (EditText) view.findViewById(R.id.et_foler_name);
+            etName.setText("");
+            etName.setHint("请输入密码");
+            builder.setTitle("密码检验");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //获取输入的字符串
+                    String password = etName.getText().toString();
+                    Log.d("mPassword: ", mPassword);
+                    Log.d("password: ", password);
+                    //判断密码正确性
+                    if (!password.equals(mPassword)) {
+                        Log.d("密码不正确,正确密码是：",mPassword);
+                        dialog.dismiss();
+                        onBackPressed();
+                    }
+                }
+            });
+            builder.setNegativeButton("cancel", new DialogInterface.OnClickListener(){
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                    onBackPressed();
+                }
+            });
+            final Dialog dialog = builder.setView(view).show();
+            dialog.show();
+        }
 
         /**
          * TODO: Add the menu for setting alert. Currently disable it because the DateTimePicker
@@ -739,6 +779,42 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         }
         else if(item.getItemId()==R.id.menu_top){
             mWorkingNote.setTop((mWorkingNote.getTopId())==1 ? "0" : "1");
+        }else if(item.getItemId()==R.id.menu_set_passcode){
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            final View view = LayoutInflater.from(this).inflate(R.layout.dialog_edit_text,null);
+            //编辑Text
+            final EditText etName = (EditText)view.findViewById(R.id.et_foler_name);
+            etName.setText("");
+            etName.setHint("请输入密码");
+            builder.setTitle("为便签设置新密码");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //获取输入的字符串
+                    String password = etName.getText().toString();
+                    //设置密码
+                    mWorkingNote.setPassword(password);
+                    //设置密码成功提示
+                    Toast.makeText(NoteEditActivity.this, "密码设置成功", Toast.LENGTH_SHORT).show();
+                    //关闭软键盘
+                    InputMethodManager inputMethodManager = (InputMethodManager)
+                            getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(etName.getWindowToken(),0);
+                    //关闭dialog
+                    dialog.dismiss();
+                }
+            });
+            builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //关闭软键盘
+                    InputMethodManager inputMethodManager = (InputMethodManager)
+                            getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(etName.getWindowToken(),0);
+                }
+            });
+            final Dialog dialog = builder.setView(view).show();
+            dialog.show();
         }
         return true;
     }

@@ -51,6 +51,14 @@
         android:title="@string/menu_remove_remind" />
 
     <item
+        android:id="@+id/menu_set_passcode"
+        android:title="@string/menu_set_passcode"/>
+
+    <item
+        android:id="@+id/menu_delete_passcode"
+        android:title="@string/menu_delete_passcode"/>
+
+    <item
         android:id="@+id/menu_read"
         android:title="@string/menu_read" />
 

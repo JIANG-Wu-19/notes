@@ -70,6 +70,8 @@ public class WorkingNote {
 
     private String mTop;
 
+    private String mPassword;
+
     private NoteSettingChangedListener mNoteSettingStatusListener;
 
 
@@ -112,7 +114,8 @@ public class WorkingNote {
             NoteColumns.WIDGET_ID,
             NoteColumns.WIDGET_TYPE,
             NoteColumns.MODIFIED_DATE,
-            NoteColumns.TOP
+            NoteColumns.TOP,
+            NoteColumns.PASSWORD
     };
 
     private static final int DATA_ID_COLUMN = 0;
@@ -136,6 +139,8 @@ public class WorkingNote {
     private static final int NOTE_MODIFIED_DATE_COLUMN = 5;
 
     private static final int NOTE_TOP_COLUMN = 6;
+
+    private static final int NOTE_PASSWORD=7;
 
 
 //    private static final int ID_COLUMN=0;
@@ -171,6 +176,7 @@ public class WorkingNote {
         mMode = 0;
         mWidgetType = Notes.TYPE_WIDGET_INVALIDE;
         mTop = "0";
+        mPassword= "";
     }
 
     // Existing note construct
@@ -198,6 +204,7 @@ public class WorkingNote {
                 mAlertDate = cursor.getLong(NOTE_ALERTED_DATE_COLUMN);
                 mModifiedDate = cursor.getLong(NOTE_MODIFIED_DATE_COLUMN);
                 mTop=cursor.getString(NOTE_TOP_COLUMN);
+                mPassword=cursor.getString(NOTE_PASSWORD);
             }
             cursor.close();
         } else {
@@ -365,6 +372,13 @@ public class WorkingNote {
         }
     }
 
+    public void setPassword(String password){
+        //将该类的mPassword属性设置为新的访问密码
+        mPassword = password;
+        //将修改后的便签密码写入到便签数据库中
+        mNote.setNoteValue(NoteColumns.PASSWORD,mPassword);
+    }
+
     public void setTop(String Top) {
         if(Top!=mTop){
             mTop=Top;
@@ -384,6 +398,10 @@ public class WorkingNote {
 
     public String getContent() {
         return mContent;
+    }
+
+    public String getPassword(){
+        return mPassword;
     }
 
     public long getAlertDate() {

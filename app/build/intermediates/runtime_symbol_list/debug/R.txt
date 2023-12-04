@@ -219,6 +219,7 @@ int id ll_font_small 0x7f060050
 int id ll_font_super 0x7f060051
 int id menu_alert 0x7f060052
 int id menu_delete 0x7f060053
+int id menu_delete_passcode 0x7f060090
 int id menu_delete_remind 0x7f060054
 int id menu_export_text 0x7f060055
 int id menu_font_size 0x7f060056
@@ -228,6 +229,7 @@ int id menu_new_note 0x7f060059
 int id menu_read 0x7f06005a
 int id menu_search 0x7f06005b
 int id menu_send_to_desktop 0x7f06005c
+int id menu_set_passcode 0x7f060091
 int id menu_setting 0x7f06005d
 int id menu_share 0x7f06005e
 int id menu_sync 0x7f06005f
@@ -344,6 +346,7 @@ int string info_note_enter_desktop 0x7f0c001f
 int string menu_alert 0x7f0c0020
 int string menu_create_folder 0x7f0c0021
 int string menu_delete 0x7f0c0022
+int string menu_delete_passcode 0x7f0c0070
 int string menu_deselect_all 0x7f0c0023
 int string menu_export_text 0x7f0c0024
 int string menu_folder_change_name 0x7f0c0025
@@ -365,6 +368,7 @@ int string menu_select_all 0x7f0c0034
 int string menu_select_none 0x7f0c0035
 int string menu_select_title 0x7f0c0036
 int string menu_send_to_desktop 0x7f0c0037
+int string menu_set_passcode 0x7f0c0071
 int string menu_setting 0x7f0c0038
 int string menu_share 0x7f0c0039
 int string menu_sync 0x7f0c003a

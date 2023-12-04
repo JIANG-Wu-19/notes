@@ -118,6 +118,7 @@ id ll_font_small
 id ll_font_super
 id menu_alert
 id menu_delete
+id menu_delete_passcode
 id menu_delete_remind
 id menu_export_text
 id menu_font_size
@@ -127,6 +128,7 @@ id menu_new_note
 id menu_read
 id menu_search
 id menu_send_to_desktop
+id menu_set_passcode
 id menu_setting
 id menu_share
 id menu_sync
@@ -212,6 +214,7 @@ string info_note_enter_desktop
 string menu_alert
 string menu_create_folder
 string menu_delete
+string menu_delete_passcode
 string menu_deselect_all
 string menu_export_text
 string menu_folder_change_name
@@ -233,6 +236,7 @@ string menu_select_all
 string menu_select_none
 string menu_select_title
 string menu_send_to_desktop
+string menu_set_passcode
 string menu_setting
 string menu_share
 string menu_sync

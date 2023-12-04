@@ -67,6 +67,8 @@
     <string name="menu_top">置顶</string>
     <string name="menu_title_select_folder">选择文件夹</string>
     <string name="menu_move_parent_folder">上一级文件夹</string>
+    <string name="menu_set_passcode">设置密码</string>
+    <string name="menu_delete_passcode">删除密码</string>
     <string name="info_note_enter_desktop">已添加到桌面</string>
     <string name="alert_title_delete">删除</string>
     <string name="alert_message_delete_notes">确认要删除所选的 %d 条便签吗?</string>
@@ -159,6 +161,12 @@
 
     <string name="note_top">置顶</string>
     <string name="Cancel_top">取消置顶</string>
+
+    <string name="menu_hushui">背景:湖水</string>
+    <string name="menu_jiguang">背景:极光</string>
+    <string name="menu_katong">背景:卡通</string>
+    <string name="menu_shuiguo">背景:水果</string>
+    <string name="menu_chengshi">背景:城市</string>
 
 
 </resources>

@@ -36,4 +36,24 @@
     <item
         android:id="@+id/menu_search"
         android:title="@string/menu_search"/>
+
+    <item
+        android:id="@+id/menu_hushui"
+        android:title="@string/menu_hushui"/>
+
+    <item
+        android:id="@+id/menu_jiguang"
+        android:title="@string/menu_jiguang"/>
+
+    <item
+        android:id="@+id/menu_katong"
+        android:title="@string/menu_hushui"/>
+
+    <item
+        android:id="@+id/menu_shuiguo"
+        android:title="@string/menu_shuiguo"/>
+
+    <item
+        android:id="@+id/menu_chengshi"
+        android:title="@string/menu_chengshi"/>
 </menu>
