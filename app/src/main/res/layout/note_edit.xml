@@ -33,12 +33,20 @@
 
             <TextView
                 android:id="@+id/tv_modified_date"
-                android:layout_width="0dip"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginRight="8dip"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearanceSecondaryItem" />
+
+            <TextView
+                android:id="@+id/text_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="8dip"
+                android:layout_weight="1"/>
 
             <ImageView
                 android:id="@+id/iv_alert_icon"
@@ -64,16 +72,18 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/voice_input"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/voice_input">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/iatBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="开始听写"/>
+                android:text="开始听写" />
+
+
 
         </LinearLayout>
 

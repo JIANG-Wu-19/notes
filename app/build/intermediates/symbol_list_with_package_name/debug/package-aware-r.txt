@@ -81,6 +81,7 @@ drawable font_small
 drawable font_super
 drawable hushui
 drawable icon_app
+drawable icon_app1
 drawable jiguang
 drawable katong
 drawable list_background
@@ -279,6 +280,7 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
+id text_num
 id time
 id title
 id tv_alert_date
@@ -392,6 +394,7 @@ string menu_sync_cancel
 string menu_title_select_folder
 string menu_top
 string note_alert_expired
+string note_length
 string note_link_email
 string note_link_other
 string note_link_tel

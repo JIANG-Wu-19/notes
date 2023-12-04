@@ -49,6 +49,7 @@ import android.speech.tts.TextToSpeech.OnInitListener;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.text.format.DateUtils;
 import android.text.Editable;
 import android.text.style.BackgroundColorSpan;
@@ -201,6 +202,9 @@ public class NoteEditActivity extends Activity implements OnClickListener,
 
     private String mPassword;
 
+    private EditText editText;
+    private TextView textView;
+
     private final int PHOTO_REQUEST = 1;//请求码
 
 
@@ -233,6 +237,8 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         initResources();
 
         final ImageButton add_img_btn = (ImageButton) findViewById(R.id.add_img_btn);
+        editText=(EditText) findViewById(R.id.note_edit_view);
+        textView=(TextView) findViewById(R.id.text_num);
 
         add_img_btn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -242,6 +248,24 @@ public class NoteEditActivity extends Activity implements OnClickListener,
                 loadImage.addCategory(Intent.CATEGORY_OPENABLE);
                 loadImage.setType("image/*");
                 startActivityForResult(loadImage, PHOTO_REQUEST);
+            }
+        });
+
+        editText.addTextChangedListener(new TextWatcher() {
+            int currentLength = 0;
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                textView.setText(getString(R.string.note_length) + currentLength);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                currentLength = editText.getText().length();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                textView.setText(getString(R.string.note_length) + currentLength);
             }
         });
 

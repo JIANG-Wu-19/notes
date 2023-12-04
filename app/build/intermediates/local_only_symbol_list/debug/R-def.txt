@@ -40,6 +40,7 @@ drawable font_small
 drawable font_super
 drawable hushui
 drawable icon_app
+drawable icon_app1
 drawable jiguang
 drawable katong
 drawable list_background
@@ -156,6 +157,7 @@ id prefenerece_sync_status_textview
 id preference_sync_button
 id selection_menu
 id sv_note_edit
+id text_num
 id tv_alert_date
 id tv_folder_name
 id tv_modified_date
@@ -259,6 +261,7 @@ string menu_sync_cancel
 string menu_title_select_folder
 string menu_top
 string note_alert_expired
+string note_length
 string note_link_email
 string note_link_other
 string note_link_tel

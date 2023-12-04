@@ -80,6 +80,7 @@ int drawable font_small 0x7f050013
 int drawable font_super 0x7f050014
 int drawable hushui 0x7f05004f
 int drawable icon_app 0x7f050015
+int drawable icon_app1 0x7f050053
 int drawable jiguang 0x7f050050
 int drawable katong 0x7f050051
 int drawable list_background 0x7f050016
@@ -278,6 +279,7 @@ int id tag_unhandled_key_listeners 0x7f06007f
 int id tag_window_insets_animation_callback 0x7f060080
 int id text 0x7f060081
 int id text2 0x7f060082
+int id text_num 0x7f060097
 int id time 0x7f060083
 int id title 0x7f060084
 int id tv_alert_date 0x7f060085
@@ -391,6 +393,7 @@ int string menu_sync_cancel 0x7f0c003b
 int string menu_title_select_folder 0x7f0c003c
 int string menu_top 0x7f0c003d
 int string note_alert_expired 0x7f0c003e
+int string note_length 0x7f0c0077
 int string note_link_email 0x7f0c003f
 int string note_link_other 0x7f0c0040
 int string note_link_tel 0x7f0c0041
