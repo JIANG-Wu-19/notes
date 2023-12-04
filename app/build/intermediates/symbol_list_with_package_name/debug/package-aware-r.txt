@@ -283,6 +283,7 @@ id text2
 id text_num
 id time
 id title
+id translate
 id tv_alert_date
 id tv_folder_name
 id tv_modified_date
@@ -329,6 +330,7 @@ string alert_message_delete_folder
 string alert_message_delete_note
 string alert_message_delete_notes
 string alert_title_delete
+string already_translate
 string app_name
 string app_widget2x2
 string app_widget4x4
@@ -393,6 +395,7 @@ string menu_sync
 string menu_sync_cancel
 string menu_title_select_folder
 string menu_top
+string not_translate
 string note_alert_expired
 string note_length
 string note_link_email
@@ -431,6 +434,8 @@ string search_hint
 string search_label
 string search_setting_description
 string set_remind_time_message
+string start_dictation
+string start_translate
 string status_bar_notification_info_overflow
 string success_sdcard_export
 string success_sync_account

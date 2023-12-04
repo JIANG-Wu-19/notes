@@ -170,6 +170,12 @@
 
     <string name="note_length">字符数:</string>
 
+    <string name="start_dictation">开始听写</string>
+    <string name="start_translate">开始翻译</string>
+
+    <string name="not_translate">未翻译</string>
+    <string name="already_translate">已翻译</string>
+
 
 
 </resources>

@@ -60,6 +60,7 @@
     <string name="alert_message_delete_note">Confirm to delete this note?</string>
     <string name="alert_message_delete_notes">Confirm to delete the selected %d notes?</string>
     <string name="alert_title_delete">Delete selected notes</string>
+    <string name="already_translate">Already</string>
     <string name="app_name">uNote</string>
     <string name="app_widget2x2">Notes 2x2</string>
     <string name="app_widget4x4">Notes 4x4</string>
@@ -124,6 +125,7 @@
     <string name="menu_sync_cancel">Cancel syncing</string>
     <string name="menu_title_select_folder">Select folder</string>
     <string name="menu_top">Top</string>
+    <string name="not_translate">No</string>
     <string name="note_alert_expired">Expired</string>
     <string name="note_length">length:</string>
     <string name="note_link_email">Send email</string>
@@ -162,6 +164,8 @@
     <string name="search_label">Searching Notes</string>
     <string name="search_setting_description">Text in your notes</string>
     <string name="set_remind_time_message">Set reminder</string>
+    <string name="start_dictation">start dictation</string>
+    <string name="start_translate">start translate</string>
     <string name="success_sdcard_export">Export successful</string>
     <string name="success_sync_account">Sync is successful with account %1$s</string>
     <string name="sync_progress_init_list">Getting remote note list...</string>

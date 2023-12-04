@@ -102,6 +102,7 @@ import net.micode.notes.widget.NoteWidgetProvider_2x;
 import net.micode.notes.widget.NoteWidgetProvider_4x;
 import net.micode.notes.speech.setting.IatSettings;
 import net.micode.notes.speech.util.JsonParser;
+import net.micode.notes.ui.translate_demo.*;
 
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -117,6 +118,12 @@ import java.io.InputStream;
 import androidx.core.app.ActivityCompat;
 
 import org.w3c.dom.Text;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class NoteEditActivity extends Activity implements OnClickListener,
@@ -205,6 +212,10 @@ public class NoteEditActivity extends Activity implements OnClickListener,
     private EditText editText;
     private TextView textView;
 
+    public String restore_translate;
+
+    public String result;
+
     private final int PHOTO_REQUEST = 1;//请求码
 
 
@@ -237,8 +248,65 @@ public class NoteEditActivity extends Activity implements OnClickListener,
         initResources();
 
         final ImageButton add_img_btn = (ImageButton) findViewById(R.id.add_img_btn);
+        final Button get_local = findViewById(R.id.translate);
         editText=(EditText) findViewById(R.id.note_edit_view);
         textView=(TextView) findViewById(R.id.text_num);
+
+
+        String word=editText.getText().toString();
+
+        get_local.setOnClickListener(new OnClickListener() {    //如果点击按钮，则触发
+            @Override
+            public void onClick(final View v) {
+                Button trans1 = new Button(NoteEditActivity.this);    //三个功能的按钮
+                Button trans2 = new Button(NoteEditActivity.this);
+                Button trans3 = new Button(NoteEditActivity.this);
+                trans1.setText("中文翻译为英文");
+                trans2.setText("英文翻译为中文");
+                trans3.setText("还原");
+                LinearLayout linear = new LinearLayout(NoteEditActivity.this);    //定义线性表结构
+                linear.setOrientation(LinearLayout.VERTICAL);    //设置为垂直结构
+                linear.addView(trans1);    //将三个按钮添加到线性表中
+                linear.addView(trans2);
+                linear.addView(trans3);
+                AlertDialog.Builder builder = new AlertDialog.Builder(NoteEditActivity.this);    //定义一个AlertDialog生成器
+                builder.setView(linear);    //附上线性表结构
+                builder.setTitle("请选择翻译模式");    //提示语句
+                AlertDialog choose_trans = builder.create();    //生成一个AlertDialog的对话框
+                choose_trans.show();    //展示
+                trans1.setOnClickListener(new OnClickListener() {    //如果点击第一个按钮，则触发
+                    @Override
+                    public void onClick(View v) {
+                        //功能语句
+                        restore_translate=editText.getText().toString();
+                        translate(word);
+                        editText.setText(result);
+                    }
+                });
+                trans2.setOnClickListener(new OnClickListener() {     //如果点击第二个按钮，则触发
+                    @Override
+                    public void onClick(View v) {
+                        //功能语句
+                        restore_translate=editText.getText().toString();
+                        translate(word);
+                        editText.setText(result);
+                    }
+                });
+                trans3.setOnClickListener(new OnClickListener() {     //如果点击第三个按钮，则触发
+                    @Override
+                    public void onClick(View v) {
+                        //功能语句
+                        if(restore_translate==null||restore_translate.toString().equals(editText.getText().toString())){
+                            Toast.makeText(NoteEditActivity.this,getString(R.string.not_translate),Toast.LENGTH_SHORT).show();
+                        }else{
+                            editText.setText(restore_translate);
+                            Toast.makeText(NoteEditActivity.this,getString(R.string.already_translate),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        });
+
 
         add_img_btn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -278,6 +346,48 @@ public class NoteEditActivity extends Activity implements OnClickListener,
 
         mIatDialog = new RecognizerDialog(this, mInitListener);
         mSharedPreferences = getSharedPreferences(IatSettings.PREFER_NAME, Activity.MODE_PRIVATE);
+    }
+
+
+
+
+    public void translate(String words) {
+        //准备请求百度翻译接口需要的参数
+        String word = words;//需查询的单词 q
+        String from = "auto";//源语种 en 英语 zh 中文
+        //String中英文占用一个字节，中文占用两个字节，
+        //利用String的这个存储特性可以用来判断String中有没有中文。
+        //  to = "zh"; //没有汉字 英译中
+        String to = "en";//含有汉字 中译英
+        String appid = "appid";//appid 管理控制台有
+        String salt = (int) (Math.random() * 100 + 1) + "";//随机数这里范围是[0,100]整数无强制要求
+        String key = "key";//密钥 管理控制台有
+        String secretKey = appid + word + salt + key;// secretKey = appid+q+salt+密钥
+        String sign = MD5Utils.getMD5Code(secretKey);// 签名 = secretKey 的MD5加密32位字母小写
+        Log.d(TAG, "secretKey：" + secretKey);
+        Log.d(TAG, "sign: " + sign);
+
+        Retrofit retrofitBaidu = new Retrofit.Builder()
+                .baseUrl("https://fanyi-api.baidu.com/api/trans/vip/")
+                .addConverterFactory(GsonConverterFactory.create()) // 设置数据解析器
+                .build();
+        BaiduTranslateService baiduTranslateService =retrofitBaidu.create(BaiduTranslateService.class);
+        Call<RespondBean> call = baiduTranslateService.translate(word, from, to, appid, salt, sign);
+        call.enqueue(new Callback<RespondBean>() {
+            @Override
+            public void onResponse(Call<RespondBean> call, Response<RespondBean> response) {
+                //请求成功
+                Log.d(TAG, "onResponse: 请求成功");
+                RespondBean respondBean = response.body();//返回的JSON字符串对应的对象
+                result = respondBean.getTrans_result().get(0).getDst();//获取翻译的字符串String
+                Log.d(TAG, "中译英结果" + result);
+            }
+            @Override
+            public void onFailure(Call<RespondBean> call, Throwable t) {
+                //请求失败 打印异常
+                Log.d(TAG, "onResponse: 请求失败 " + t);
+            }
+        });
     }
 
     //路径字符串格式 转换为 图片image格式
